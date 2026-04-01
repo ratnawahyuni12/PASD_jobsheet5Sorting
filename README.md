@@ -24,3 +24,23 @@ Jawaban: kondisi tersebut mempunyai 2 syarat yaitu
 perulangan berhenti ketika sudah ketemu posisi yang tepat untuk menyisipkan temp.
 4. Pada Insertion sort, apakah tujuan dari perintah data[j + 1] = data[j];
 Jawaban: perintah tersebut berfungsi untuk menggeser elemen data[j] satu posisi ke kanan (ke posisi j + 1), supaya ada ruang kosong untuk menyisipkan elemen temp di posisi yang tepat. jadi, data[j + 1] = data[j]; ini yang melakukan proses geser di tiap iterasi while, sampai ketemu posisi yang tepat untuk temp.
+
+5.3 Praktikum 2 – Pertanyaan
+
+-- BUBBLE SORT --
+1. Perhatikan perulangan di dalam bubbleSort() di bawah ini:
+for (int i = 0; i < listMhs.length - 1; i++) {
+    for (int j = 1; j < listMhs.length - i; j++) {
+        
+    }
+}
+  a. Mengapa syarat dari perulangan i adalah i < listMhs.length - 1 ?
+  Jawaban: Karena pada setiap putaran, 1 elemen terbesar sudah berpindah ke posisi akhir yang benar. Sehingga hanya perlu n-1 putaran untuk mengurutkan n elemen. Jika sampai i < listMhs.length, putaran terakhir tidak akan melakukan apapun karena hanya tersisa 1 elemen yang sudah pasti benar posisinya, jadi tidak efisien.
+  b. Mengapa syarat dari perulangan j adalah j < listMhs.length - i ?
+  Jawaban: Karena setiap selesai 1 putaran loop i, elemen terbesar sudah "menggelembung" ke posisi paling akhir dan tidak perlu dibandingkan lagi. Dengan mengurangi i pada batas atas j, kita menghindari perbandingan elemen yang sudah berada di posisi benar, sehingga lebih efisien.
+  c. Jika banyak data di dalam listMhs adalah 50, maka berapakali perulangan i  akan berlangsung? Dan ada berapa Tahap bubble sort yang ditempuh?
+  Jawaban: 
+  - perulangan i berlangsung 49 kali ( i = 0, 1, 2, ..., 48)
+  - jumlah tahap bubble sort = 49 tahap
+  - karena rumusnya yaitu jumlah tahap = n - 1 = 50 - 1 = 49
+2. Modifikasi program diatas dimana data mahasiswa bersifat dinamis (input dari keyborad) yang terdiri dari nim, nama, kelas, dan ipk!
