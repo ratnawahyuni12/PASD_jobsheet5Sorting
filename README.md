@@ -61,3 +61,10 @@ Jawaban: Proses tersebut terdiri dari 2 bagian:
 - Bagian pencarian → mencari indeks mahasiswa dengan IPK terkecil dari posisi i sampai akhir array, lalu disimpan di variabel idxMin
 - Bagian penukaran → setelah ketemu, menukar posisi mahasiswa di index i dengan mahasiswa yang memiliki IPK terkecil di idxMin menggunakan variabel sementara tmp
 Jadi setiap putaran, mahasiswa dengan IPK terkecil akan dipindahkan ke posisi paling depan yang belum terurut, sehingga array terurut secara ascending.
+
+-- INSERTION SORT --
+Ubahlah fungsi pada InsertionSort sehingga fungsi ini dapat melaksanakan proses sorting dengan cara descending.
+Jawaban: Cukup ganti operator > menjadi < pada kondisi while
+Penjelasan:
+- Versi ASC → listMhs[j-1].ipk > temp.ipk artinya geser elemen yang lebih besar ke kanan.
+- Versi DESC → listMhs[j-1].ipk < temp.ipk artinya geser elemen yang lebih kecil ke kanan, sehingga elemen terbesar ada di depan.
