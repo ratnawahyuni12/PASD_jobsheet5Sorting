@@ -44,3 +44,20 @@ for (int i = 0; i < listMhs.length - 1; i++) {
   - jumlah tahap bubble sort = 49 tahap
   - karena rumusnya yaitu jumlah tahap = n - 1 = 50 - 1 = 49
 2. Modifikasi program diatas dimana data mahasiswa bersifat dinamis (input dari keyborad) yang terdiri dari nim, nama, kelas, dan ipk!
+
+-- SELECTION SORT --
+Di dalam method selection sort, terdapat baris program seperti di bawah ini:
+int idxMin = i;
+for (int j = i + 1; j < listMhs.length; j++) {
+    if (listMhs[j].ipk < listMhs[idxMin].ipk) {
+        idxMin = j;
+    }
+}
+Mahasiswa20 tmp = listMhs[idxMin];
+listMhs[idxMin] = listMhs[i];
+listMhs[i] = tmp;
+Untuk apakah proses tersebut, jelaskan!
+Jawaban: Proses tersebut terdiri dari 2 bagian:
+- Bagian pencarian → mencari indeks mahasiswa dengan IPK terkecil dari posisi i sampai akhir array, lalu disimpan di variabel idxMin
+- Bagian penukaran → setelah ketemu, menukar posisi mahasiswa di index i dengan mahasiswa yang memiliki IPK terkecil di idxMin menggunakan variabel sementara tmp
+Jadi setiap putaran, mahasiswa dengan IPK terkecil akan dipindahkan ke posisi paling depan yang belum terurut, sehingga array terurut secara ascending.
